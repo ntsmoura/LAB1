@@ -15,4 +15,16 @@ int main(){
   if(it!=S.end) S.erase(it).
   if(S.count(3)) S.erase(3);
   S.clear();
+
+  //PAIR
+  pair <int,int> p;
+  p.first = 10;
+  p.second = 20;
+
+  //PAIR COM SET
+  set <pair<int,int>> S;
+  for(i = 0; i<10;i++){
+    cin >> p.first >> p.second;
+    S.insert(p);
+  }
 }
