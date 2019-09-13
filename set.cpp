@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+#include <utility>
 int main(){
   int i, n;
   set <int> S;
@@ -12,7 +13,7 @@ int main(){
     cout << *it;
   }
   it = S.find(3);
-  if(it!=S.end) S.erase(it).
+  if(it!=S.end()) S.erase(it).
   if(S.count(3)) S.erase(3);
   S.clear();
 
@@ -26,5 +27,10 @@ int main(){
   for(i = 0; i<10;i++){
     cin >> p.first >> p.second;
     S.insert(p);
+  }
+
+  //Operator (como pair funciona)
+  bool operator<(pair<int,int> a, pai<int,int>b){
+    return a.first < b.first || a.first == b.first && a.second < b.second;
   }
 }
