@@ -2,37 +2,41 @@
 #include <set>
 #include <utility>
 #include <vector>
+#define endl "\n"
 using namespace std;
 int main(){
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  cout.tie(NULL);
   set <string>::iterator it;
-  int k,n,tt1=0,tt2=0;
+  int k,n;
   cin >> k >> n;
-  set <string> dic,digitadas;
+  set <string> dic,dn,dp;
+  string pl;
   for(int i = 0; i<k;i++){
-    string pl;
     cin >> pl;
     dic.insert(pl);
   }
+  int l;
+  string f;
   for(int z = 0; z<n;z++){
-      int l;
       cin >> l;
       for(int p = 0; p<l;p++){
-        string f;
         cin >> f;
         it = dic.find(f);
         if (it!=dic.end()){
           if (p != l-1) cout << "bobba" << " ";
           else cout << "bobba";
-          if(digitadas.find(f)==digitadas.end()) tt2++;
+          dp.insert(f);
         }
         else{
-          if(digitadas.find(f)==digitadas.end()) tt1++;
+          dn.insert(f);
           if (p != l-1) cout << f << " ";
           else cout << f;
         }
-        digitadas.insert(f);
       }
       cout << endl;
   }
-  cout << tt1 << " " << tt2 << endl;
+  cout << dn.size() << " " << dp.size() << endl;
 }
+
