@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include<algorithm>
+#include<string>
 using namespace std;
 bool cmp(string a, string b){
     return(a>b);
