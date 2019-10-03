@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<string>
 //#include<numeric>
 using namespace std;
 //#define endl "\n"
